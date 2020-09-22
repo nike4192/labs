@@ -20,13 +20,15 @@ int main() {
 
 	char operation_symbol = input_string[1];
 
+	int result = 0;
+
 	if(operation_symbol == '+')
 		result = a + b;
 	else if(operation_symbol == '-')
 		result = a - b;
 	else if(operation_symbol == '*')
 		result = a * b;
-	else if(operation_symbol == '/')
+	else if(operation_symbol == '/' && b != 0)
 		result = a / b;
 
 	cout << input_string << '=' << result;
