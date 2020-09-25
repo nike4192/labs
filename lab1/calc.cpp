@@ -8,30 +8,22 @@
 
 using namespace std;
 
+
 int main() {
 
-	string input_string;
-	cin >> input_string;
+	int x, y;
+	char z;
 
-	const unsigned int ASCII_DIGITS_OFFSET = 48;
+	cin >> x >> z >> y;
 
-	int a = input_string[0] - ASCII_DIGITS_OFFSET,
-		b = input_string[2] - ASCII_DIGITS_OFFSET;
+	double result;
 
-	char operation_symbol = input_string[1];
+	     if (z == '+') result = x + y;
+	else if (z == '-') result = x - y;
+	else if (z == '*') result = x * y;
+	else if (z == '/') result = x / y;
 
-	int result = 0;
-
-	if(operation_symbol == '+')
-		result = a + b;
-	else if(operation_symbol == '-')
-		result = a - b;
-	else if(operation_symbol == '*')
-		result = a * b;
-	else if(operation_symbol == '/' && b != 0)
-		result = a / b;
-
-	cout << input_string << '=' << result;
+	cout << x << z << y << '=' << result;
 
 	return 0;
 }
