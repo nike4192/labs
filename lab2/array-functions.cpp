@@ -41,12 +41,12 @@ void MySort(int* start, int* end) { // bubble sort
 
 void PrintArray(const int* start, const int* end) {
 
-	for(int* i = (int*)start; i < end; i++) {
-		cout << *i;
-		if( i != end - 1 ) cout << ' ';
-	}
+    int* i = (int*)start;
+    int* preend = (int*)end - 1; 
 
-	cout << endl;
+    for (; i < preend ;)
+        cout << *i++ << ' ';
+    cout << *i << endl;
 }
 
 int main() {
